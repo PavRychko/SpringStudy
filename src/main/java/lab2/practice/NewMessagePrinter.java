@@ -1,18 +1,23 @@
 package lab2.practice;
 
-@ReplaceWith(NewMessagePrinter.class)
-public class MessagePrinter implements Printer {
+
+
+public class NewMessagePrinter extends MessagePrinter {
     private String message;
 
+    @Override
     public void print() {
         System.out.println(message);
     }
 
+    @Override
     public void setMessage(String message) {
         this.message = message;
     }
 
+    @Override
     public String getMessage() {
         return message;
     }
+
 }
